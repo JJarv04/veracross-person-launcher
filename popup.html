@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Veracross Person Launcher</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title-row">
+        <img src="icons/icon-tile.png" alt="Veracross" class="app-icon" />
+        <h1><span class="accent-word">Veracross</span> Person Launcher</h1>
+        <button id="popoutBtn" class="popout-btn" title="Pop out (Alt+V)" hidden aria-label="Pop out">🡥</button>
+      </div>
+
+      <label for="id">Person ID</label>
+      <div class="id-input-row">
+        <input id="id" type="text" inputmode="numeric" placeholder="12345" />
+        <button id="submit">Go</button>
+      </div>
+
+        <label for="id">Open in:</label>
+      <div class="radios">
+        <label><input type="radio" name="openMode" value="new" id="modeNew"> New tab</label>
+        <label><input type="radio" name="openMode" value="existing" id="modeExisting"> Existing tab</label>
+      </div>
+
+      <details id="settingsCollapsible" class="settings-section">
+        <summary class="settings-summary">Settings</summary>
+        <div class="settings-content">
+          <label for="schoolRoute">School Route/Short Code<span class="hint-icon"
+            title="Find your Axiom School Route/Short Code by opening your institution's Axiom URL (example: https://axiom.veracross.au/{schoolRoute}/#/...). The part after 'veracross.au/' and in the place of {schoolRoute} is your School Route/Short Code.">🛈</span></label>
+          <input id="schoolRoute" type="text" placeholder="Enter School Route/Short Code" />
+          <label for="tldSelect" class="tld-label">Axiom TLD <span class="hint-icon"
+              title="Find your Axiom TLD by opening your institution's Axiom URL (example: https://axiom.veracross.au/{schoolRoute}). The part after 'veracross.' is your TLD (for example '.au' or '.eu').">🛈</span></label>
+          <select id="tldSelect" class="tld-select" title="Top-level domain">
+            <option value="loading">Loading…</option>
+          </select>
+          <input id="tldCustom" class="tld-custom" type="text" placeholder="e.g. .au or co.uk" aria-label="Custom TLD"
+            style="display:none" />
+        </div>
+      </details>
+
+      <div id="message" role="status"></div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
