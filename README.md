@@ -1,7 +1,7 @@
 # Veracross Person Launcher (Axiom)
 
 This small extension allows you to quickly open a person record in Axiom simply by entering the Veracross Person ID.
-![Popup Screenshot](icons\screenshot-store.png)
+![Popup Screenshot](/icons/Screenshot-store.png)
 
 Features:
 - Quickly open a person account in Axiom simply by entering the ID.
